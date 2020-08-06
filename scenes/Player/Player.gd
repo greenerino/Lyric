@@ -16,9 +16,11 @@ var state = MOVE
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var attackAnim = $Attack
+onready var attackHitBox = $Attack/Hitbox
 
 func _ready():
 	animationTree.active = true
+	attackHitBox.knockback_vector = direction
 
 func attack():
 	velocity = Vector2.ZERO
@@ -42,6 +44,7 @@ func move(delta):
 		
 	if input:
 		direction = input
+		attackHitBox.knockback_vector = direction
 		animationTree.set("parameters/Idle/blend_position", input)
 		animationTree.set("parameters/Run/blend_position", input)
 		animationTree.set("parameters/Attack/blend_position", input)

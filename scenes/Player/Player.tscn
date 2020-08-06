@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/bluehero.png" type="Texture" id=2]
@@ -502,6 +502,8 @@ graph_offset = Vector2( 112, 70 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=34]
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=36]
+
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2147483650
 script = ExtResource( 1 )
@@ -541,3 +543,8 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 
 [node name="Attack" parent="." instance=ExtResource( 3 )]
 position = Vector2( -0.249855, -0.700401 )
+
+[node name="AnimationTree" parent="Attack" index="2"]
+parameters/playback = SubResource( 36 )
+
+[editable path="Attack"]
