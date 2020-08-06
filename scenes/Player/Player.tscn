@@ -547,4 +547,7 @@ position = Vector2( -0.249855, -0.700401 )
 [node name="AnimationTree" parent="Attack" index="2"]
 parameters/playback = SubResource( 36 )
 
+[node name="Hitbox" parent="Attack" index="3"]
+damage = 2
+
 [editable path="Attack"]
