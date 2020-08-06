@@ -503,6 +503,7 @@ graph_offset = Vector2( 112, 70 )
 [sub_resource type="AnimationNodeStateMachinePlayback" id=34]
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2147483650
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -510,7 +511,6 @@ position = Vector2( 1, -6 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
-frame = 2
 
 [node name="CollisionMove" type="CollisionShape2D" parent="."]
 rotation = 1.5708
