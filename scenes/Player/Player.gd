@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 var velocity = Vector2()
 var direction = Vector2()
-const ACCELERATION = 300
-const MAX_SPEED = 100
-const FRICTION = 300
+export var ACCELERATION = 300
+export var MAX_SPEED = 100
+export var FRICTION = 300
 
 enum {
 	MOVE,
