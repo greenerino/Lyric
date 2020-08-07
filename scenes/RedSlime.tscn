@@ -35,6 +35,7 @@ script = ExtResource( 3 )
 [node name="red-slime" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -8 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="CollisionMove" type="CollisionShape2D" parent="."]

@@ -556,7 +556,7 @@ tree_root = SubResource( 14 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 15 )
-parameters/Attack/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
 
 [node name="Hitbox" parent="." instance=ExtResource( 3 )]
 collision_mask = 8
