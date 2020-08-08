@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Lyric"
 run/main_scene="res://scenes/World/World.tscn"
 
+[autoload]
+
+PlayerStats="*res://scenes/Player/PlayerStats.tscn"
+
 [display]
 
 window/size/width=160

@@ -5,6 +5,7 @@ var direction = Vector2()
 export var ACCELERATION = 300
 export var MAX_SPEED = 100
 export var FRICTION = 300
+var stats = PlayerStats
 
 enum {
 	MOVE,
@@ -17,8 +18,10 @@ onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var attackAnim = $Attack
 onready var attackHitBox = $Attack/Hitbox
+onready var hurtBox = $Hurtbox
 
 func _ready():
+	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	attackHitBox.knockback_vector = direction
 
@@ -57,3 +60,7 @@ func move(delta):
 
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
+
+func _on_Hurtbox_area_entered(_area):
+	hurtBox.start_invincibility(0.5)
+	stats.health -= 1
