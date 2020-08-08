@@ -26,7 +26,22 @@ position = Vector2( 64.6636, 75.8024 )
 [node name="Foliage" type="YSort" parent="YSort"]
 
 [node name="Tree" parent="YSort/Foliage" instance=ExtResource( 3 )]
-position = Vector2( 123.282, 107.307 )
+position = Vector2( 121.409, 81.2739 )
+
+[node name="Tree2" parent="YSort/Foliage" instance=ExtResource( 3 )]
+position = Vector2( 11.4708, 52.0569 )
+
+[node name="Tree3" parent="YSort/Foliage" instance=ExtResource( 3 )]
+position = Vector2( 165.796, 77.7154 )
+
+[node name="Tree4" parent="YSort/Foliage" instance=ExtResource( 3 )]
+position = Vector2( 156.807, 67.6019 )
+
+[node name="Tree5" parent="YSort/Foliage" instance=ExtResource( 3 )]
+position = Vector2( 160.552, 45.5018 )
+
+[node name="Tree6" parent="YSort/Foliage" instance=ExtResource( 3 )]
+position = Vector2( 81.5166, 57.6756 )
 
 [node name="Bush2" parent="YSort/Foliage" instance=ExtResource( 2 )]
 position = Vector2( 23.3442, 71.739 )
@@ -44,7 +59,7 @@ position = Vector2( 91.5361, 75.6602 )
 position = Vector2( 67.4819, 46.2493 )
 
 [node name="RedSlime2" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 155.32, 36.5103 )
+position = Vector2( 147.828, 21.9018 )
 
 [node name="RedSlime3" parent="YSort" instance=ExtResource( 6 )]
 position = Vector2( 13.1683, 85.2053 )
