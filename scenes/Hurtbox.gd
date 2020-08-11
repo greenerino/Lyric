@@ -16,13 +16,11 @@ func _on_InvincibilityTimer_timeout():
 	invincible = false
 	emit_signal("invincibility_ended")
 	timer.stop()
-	print("invinc ended")
 
 func start_invincibility(duration):
 	invincible = true
 	emit_signal("invincibility_started")
 	timer.start(duration)
-	print("invinc started")
 
 func _on_Hurtbox_invincibility_ended():
 	monitorable = true
