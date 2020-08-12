@@ -19,6 +19,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var attackAnim = $Attack
 onready var attackHitBox = $Attack/Hitbox
 onready var hurtBox = $Hurtbox
+onready var blinkAnim = $BlinkAnimationPlayer
 
 func _ready():
 	stats.connect("no_health", self, "queue_free")
@@ -64,3 +65,9 @@ func move(delta):
 func _on_Hurtbox_area_entered(_area):
 	hurtBox.start_invincibility(0.5)
 	stats.health -= 1
+
+func _on_Hurtbox_invincibility_started():
+	blinkAnim.play("Start")
+
+func _on_Hurtbox_invincibility_ended():
+	blinkAnim.play("Stop")
