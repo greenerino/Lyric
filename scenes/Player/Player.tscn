@@ -526,7 +526,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=37]
 resource_name = "Stop"
 length = 0.1
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:material:shader_param/active")
 tracks/0/interp = 1
