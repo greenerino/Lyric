@@ -62,9 +62,9 @@ func move(delta):
 	if Input.is_action_just_pressed("attack"):
 		state = ATTACK
 
-func _on_Hurtbox_area_entered(_area):
+func _on_Hurtbox_area_entered(area):
 	hurtBox.start_invincibility(0.5)
-	stats.health -= 1
+	stats.health -= area.damage
 
 func _on_Hurtbox_invincibility_started():
 	blinkAnim.play("Start")
