@@ -23,10 +23,10 @@ func start_invincibility(duration):
 	timer.start(duration)
 
 func _on_Hurtbox_invincibility_ended():
-	monitorable = true
+	monitoring = true
 
 func _on_Hurtbox_invincibility_started():
-	set_deferred("monitorable",  false)
+	set_deferred("monitoring",  false)
 
 func _on_Hurtbox_area_entered(_area):
 	create_hit_effect()
