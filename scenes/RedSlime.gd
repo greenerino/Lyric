@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
 onready var stats = $Stats
+onready var hurtbox = $Hurtbox
+onready var blinkAnim = $BlinkAnimationPlayer
 
 const EnemyDeathEffect = preload("res://scenes/EnemyDeathEffect.tscn")
 
@@ -64,11 +66,17 @@ func _physics_process(delta):
 
 			
 func _on_Hurtbox_area_entered(area):
+	hurtbox.start_invincibility(0.4)
 	stats.health -= area.damage
 	state = KNOCKED
 	time_left = STUN_TIME
 	velocity = area.knockback_vector * KNOCKBACK_SPEED
 
+func _on_Hurtbox_invincibility_started():
+	blinkAnim.play("Start")
+
+func _on_Hurtbox_invincibility_ended():
+	blinkAnim.play("Stop")
 
 func _on_Stats_no_health():
 	queue_free()
