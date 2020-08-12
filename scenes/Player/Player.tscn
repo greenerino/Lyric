@@ -514,7 +514,7 @@ collision_layer = 2147483650
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -0.5, -5.5 )
+position = Vector2( -0.5, -5 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 4
@@ -541,7 +541,6 @@ anims/RunUp = SubResource( 13 )
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 33 )
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource( 34 )
 parameters/Attack/blend_position = Vector2( 0, 1 )
 parameters/Idle/blend_position = Vector2( 0, 1 )
@@ -549,10 +548,6 @@ parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="Attack" parent="." instance=ExtResource( 3 )]
 position = Vector2( -0.249855, -0.700401 )
-
-[node name="Sprite" parent="Attack" index="0"]
-rotation = 1.5708
-offset = Vector2( 5, 0 )
 
 [node name="AnimationTree" parent="Attack" index="2"]
 parameters/playback = SubResource( 35 )
