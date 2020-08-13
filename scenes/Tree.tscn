@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://sprites/tree.png" type="Texture" id=1]
+[ext_resource path="res://sprites/tileset_grass_details.png" type="Texture" id=1]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.33269
@@ -10,8 +10,10 @@ height = 11.6156
 collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1, -13 )
+position = Vector2( 0, -29 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
