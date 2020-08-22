@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/firehit.wav-1e6a5985e76debb30f58ca1b84743730.sample"
+
+[deps]
+
+source_file="res://sounds/firehit.wav"
+dest_files=[ "res://.import/firehit.wav-1e6a5985e76debb30f58ca1b84743730.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

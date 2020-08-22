@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/tilesets/Terrain.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Tree.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/RedSlime.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Chicken.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/HealthUI.tscn" type="PackedScene" id=7]
 
 [node name="World" type="Node2D"]
@@ -35,15 +35,12 @@ tile_data = PoolIntArray( -65538, 1, 2, -131071, 1, 1, -65524, 1, 2, 3, 1, 2, 6,
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 101.278, 33.5172 )
+position = Vector2( 109.301, 9.44841 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
 [node name="Foliage" type="YSort" parent="YSort"]
-
-[node name="RedSlime" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 57.7429, 35.5739 )
 
 [node name="Tree" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -11.1544, 115.837 )
@@ -53,6 +50,15 @@ position = Vector2( 178.704, 90.7345 )
 
 [node name="Tree3" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( 141.581, 46.5403 )
+
+[node name="Tree8" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -28.1783, 28.7022 )
+
+[node name="Tree9" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -33.5297, 14.729 )
+
+[node name="Tree10" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -1.12383, 3.43154 )
 
 [node name="Tree4" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -11.1544, -14.2709 )
@@ -66,12 +72,18 @@ position = Vector2( -13.9828, 42.2977 )
 [node name="Tree7" parent="YSort" instance=ExtResource( 3 )]
 position = Vector2( -19.6397, 63.8644 )
 
+[node name="Chicken" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 21.0168, 96.6269 )
+DISTANCE_SPEED = 30
+ORBIT_SPEED = 20
+FIREBALL_SPEED = 75
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 7 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 101.278, 33.5172 )
+position = Vector2( 109.301, 9.44841 )
 current = true
 zoom = Vector2( 1.5, 1.5 )
 process_mode = 0

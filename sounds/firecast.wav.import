@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/firecast.wav-545b3e3710bd15cc07f1a91e65ec37c8.sample"
+
+[deps]
+
+source_file="res://sounds/firecast.wav"
+dest_files=[ "res://.import/firecast.wav-545b3e3710bd15cc07f1a91e65ec37c8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

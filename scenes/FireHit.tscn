@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sounds/firehit.wav" type="AudioStream" id=1]
+[ext_resource path="res://scenes/FireHit.gd" type="Script" id=2]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.434783, 0.720497, 1 )
+colors = PoolColorArray( 0.929199, 0.698463, 0.0762234, 1, 0.921569, 0.262745, 0, 0.792157, 1, 0.0980392, 0, 0.541176, 1, 0.0980392, 0, 0.105882 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.0761364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 5.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 95.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 15.0
+damping_random = 1.0
+angle_random = 1.0
+scale = 2.5
+scale_random = 0.13
+scale_curve = SubResource( 3 )
+color_ramp = SubResource( 5 )
+
+[node name="FireHit" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.758
+autoplay = true
+
+[node name="Particles" type="Particles2D" parent="."]
+emitting = false
+amount = 40
+lifetime = 0.7
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource( 1 )
+[connection signal="finished" from="Sound" to="." method="_on_Sound_finished"]

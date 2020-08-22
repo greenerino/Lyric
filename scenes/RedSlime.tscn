@@ -77,6 +77,7 @@ tracks/0/keys = {
 }
 
 [node name="RedSlime" type="KinematicBody2D"]
+collision_layer = 16
 script = ExtResource( 3 )
 
 [node name="Stats" parent="." instance=ExtResource( 4 )]
@@ -86,6 +87,7 @@ max_health = 8
 material = SubResource( 1 )
 position = Vector2( 0, -8 )
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="CollisionMove" type="CollisionShape2D" parent="."]
