@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scenes/Effect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Effects/Effect.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/contactHit.png" type="Texture" id=2]
 [ext_resource path="res://sounds/hit.wav" type="AudioStream" id=3]
 

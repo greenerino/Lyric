@@ -1,6 +1,6 @@
 extends Node2D
 
-const Fireball = preload("res://scenes/Fireball.tscn")
+const Fireball = preload("res://scenes/entities/Fireball.tscn")
 
 func spawn(direction, speed):
 	var fireball = Fireball.instance()

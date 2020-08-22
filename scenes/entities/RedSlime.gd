@@ -4,7 +4,7 @@ onready var stats = $Stats
 onready var hurtbox = $Hurtbox
 onready var blinkAnim = $BlinkAnimationPlayer
 
-const EnemyDeathEffect = preload("res://scenes/EnemyDeathEffect.tscn")
+const EnemyDeathEffect = preload("res://scenes/effects/EnemyDeathEffect.tscn")
 
 const SPEED = 5
 const KNOCKBACK_SPEED = 80

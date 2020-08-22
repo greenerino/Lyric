@@ -2,7 +2,7 @@ extends Area2D
 
 var invincible = false
 onready var timer = $InvincibilityTimer
-onready var HitEffect = preload("res://scenes/HitEffect.tscn")
+onready var HitEffect = preload("res://scenes/effects/HitEffect.tscn")
 
 signal invincibility_started
 signal invincibility_ended

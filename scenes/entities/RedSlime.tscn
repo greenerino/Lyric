@@ -1,12 +1,15 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/red-slime.png" type="Texture" id=1]
-[ext_resource path="res://scenes/Hurtbox.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/RedSlime.gd" type="Script" id=3]
-[ext_resource path="res://scenes/Stats.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/PlayerDetectionZone.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Hitbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Areas/Hurtbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Entities/RedSlime.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Entities/Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Areas/PlayerDetectionZone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Areas/Hitbox.tscn" type="PackedScene" id=6]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=7]
+
+
+
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true

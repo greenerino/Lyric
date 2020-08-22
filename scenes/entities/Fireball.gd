@@ -4,7 +4,7 @@ export var direction = Vector2.ZERO
 export var speed = 0
 
 onready var spawnSoundPlayer = $SoundSpawn
-const FireHit = preload("res://scenes/FireHit.tscn")
+const FireHit = preload("res://scenes/effects/FireHit.tscn")
 
 func _ready():
 	spawnSoundPlayer.play()

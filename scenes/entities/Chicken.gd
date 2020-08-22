@@ -29,7 +29,7 @@ onready var stats = $Stats
 onready var attackTimer = $AttackTimer
 onready var fireballSpawner = $FireballSpawner
 
-const EnemyDeathEffect = preload("res://scenes/EnemyDeathEffect.tscn")
+const EnemyDeathEffect = preload("res://scenes/effects/EnemyDeathEffect.tscn")
 
 func _ready():
 	randomize()
