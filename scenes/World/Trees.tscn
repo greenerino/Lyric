@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/tileset_grass_details.png" type="Texture" id=1]
+
+[node name="Trees" type="StaticBody2D"]
+position = Vector2( 5.59073, -17.9914 )
+__meta__ = {
+"_editor_description_": "Used for map boundaries. The collision shape is not very precise for this reason."
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Sprite" type="Sprite" parent="YSort"]
+position = Vector2( 0, -35 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="Sprite2" type="Sprite" parent="YSort"]
+position = Vector2( 7.77829, -24.9092 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="Sprite6" type="Sprite" parent="YSort"]
+position = Vector2( 1.41048, -47.3839 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="Sprite3" type="Sprite" parent="YSort"]
+position = Vector2( -6.0965, -18.3923 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="Sprite4" type="Sprite" parent="YSort"]
+position = Vector2( -14.9259, -25.7502 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="Sprite5" type="Sprite" parent="YSort"]
+position = Vector2( -13.2441, -40.6761 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 240, 32, 64 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -5.01866, 13.6558, -0.0751953, 13.6499, 0.941271, 8.65597, 1.82516, 7.06498, 13.6692, 6.84401, 14.8182, 4.98786, 14.774, 2.20362, 13.3573, 0.520758, 7.67962, -1.52057, 7.9024, -27.802, 5.2297, -32.1451, -1.45204, -36.4883, -10.5837, -36.5996, -17.5996, -32.8133, -21.0518, -26.3543, -20.2723, -1.07504, -21.9427, 1.04084, -21.8313, 4.04762, -20.6064, 6.27487, -13.2564, 6.38623, -11.8087, 13.8475 )

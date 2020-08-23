@@ -21,10 +21,18 @@ onready var attackHitBox = $Attack/Hitbox
 onready var hurtBox = $Hurtbox
 onready var blinkAnim = $BlinkAnimationPlayer
 
+var DeathEffect = preload("res://scenes/effects/EnemyDeathEffect.tscn")
+
 func _ready():
-	stats.connect("no_health", self, "queue_free")
+	stats.connect("no_health", self, "die")
 	animationTree.active = true
 	attackHitBox.knockback_vector = direction
+
+func die():
+	var effect = DeathEffect.instance()
+	get_parent().add_child(effect)
+	effect.global_position = global_position
+	queue_free()
 
 func attack():
 	velocity = Vector2.ZERO
